@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    primary:
+      jdbc-url: jdbc:mysql://172.16.22.152:3306/incar?autoReconnect=false
+      username: incarapp
+      password: nodejs4WMQ
+      maxActive: 32
+      maxIdle: 4
+      minIdle: 1
+      defaultAutoCommit: true
+      maxAge: 60000
+      testOnBorrow: true
+      testOnReturn: true
+      validationQuery: SELECT 1
+
+    secondary:
+      jdbc-url: jdbc:mysql://172.16.5.203:3306/test?autoReconnect=false
+      username: root
+      password: maptracking
+      maxActive: 32
+      maxIdle: 4
+      minIdle: 1
+      defaultAutoCommit: true
+      maxAge: 60000
+      testOnBorrow: true
+      testOnReturn: true
+      validationQuery: SELECT 1
+
+#间隔时间 单位为分钟，不能小于1
+time: 5
+ids: 151314660
